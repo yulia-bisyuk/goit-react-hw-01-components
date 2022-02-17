@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
+import { getRandomHexColor } from '../Statistics/Statistics';
 
 const Profile = ({
   userName, tag, location, avatar,
   stats
 }) => {
-    return <div className={s.profile}>
+    return <section className={s.profile}>
   <div className="description">
     <img
       src={avatar}
@@ -20,18 +21,18 @@ const Profile = ({
   <ul className={s.stats}>
     <li className={s.statsItem}>
       <span className={s.label}>Followers</span>
-                <span className={s.quantity}>{ stats.followers}</span>
+                <span className={s.quantity} style={{color: `${getRandomHexColor()}`}}>{ stats.followers}</span>
     </li>
     <li className={s.statsItem}>
       <span className={s.label}>Views</span>
-      <span className={s.quantity}>{ stats.views}</span>
+      <span className={s.quantity} style={{color: `${getRandomHexColor()}`}}>{ stats.views}</span>
     </li>
     <li className={s.statsItem}>
       <span className={s.label}>Likes</span>
-      <span className={s.quantity}>{ stats.likes}</span>
+      <span className={s.quantity} style={{color: `${getRandomHexColor()}`}}>{ stats.likes}</span>
     </li>
   </ul>
-</div>
+</section>
 
 };
 
