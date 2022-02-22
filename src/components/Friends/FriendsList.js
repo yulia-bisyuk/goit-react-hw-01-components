@@ -6,13 +6,13 @@ const FriendsList = ({ friends }) => {
     return <section className={s.friends}>
     <ul className={s.friendList}>
     
-        {friends.map(friend => (
-            <li key={friend.id}>
+        {friends.map(({id, avatar, name, isOnline}) => (
+            <li key={id}>
             <FriendsListItem
-                id={friend.id}
-                avatar={friend.avatar}
-                name={friend.name}
-                isOnline={friend.isOnline}
+                id={id}
+                avatar={avatar}
+                name={name}
+                isOnline={isOnline}
                 />
             </li>
         )

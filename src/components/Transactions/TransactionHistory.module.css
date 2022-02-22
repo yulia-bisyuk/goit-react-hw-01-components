@@ -18,7 +18,7 @@
   border: 1px solid grey;
 }
 
-.tableRow:nth-child(odd):not(firstChild) {
+.tableRow:nth-child(odd) {
   background-color: #f1f1f1;
 }
 

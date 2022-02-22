@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
-import { getRandomHexColor } from '../Statistics/Statistics';
+import { getRandomHexColor } from 'helpers/colorGenerator';
+
 
 const Profile = ({
   userName, tag, location, avatar,
@@ -40,7 +41,7 @@ Profile.propTypes = {
     userName: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired || null,
     stats: PropTypes.object.isRequired,
 }
 
